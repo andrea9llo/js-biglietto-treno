@@ -8,18 +8,33 @@
 // del 40% per gli over 65
 
 // insieme tutte variabili
-var km, eta,costoBigl;
+var km, eta,costoBigl,scontoOver,scontoUnder,prezzoBigl;
 
 // chiedo all'utente il numero di km da percorrere
 km = parseInt( prompt("Benvenuti in Trenitalia, inserisca n° Km da percorrere."));
-console.log(km);
+// console.log(km);
 
 // chiedo all'utente età
 eta = parseInt( prompt("Età del passeggiero/a."))
-console.log(eta);
+// console.log(eta);
 
 // definire prezzo biglietto
 costoBigl = km * 0.21;
-console.log(costoBigl);
+// console.log(costoBigl);
+
+// definire lo sconto
+scontoUnder = (costoBigl*20) / 100;
+scontoOver = (costoBigl*40) / 100;
+// console.log(scontoUnder,scontoOver)
 
 // definirele condizioni per utenti minorenni e untenti over 65
+if (eta < 18) {
+  prezzoBigl = (costoBigl - scontoUnder);
+  console.log(prezzoBigl);
+}else if (eta > 65) {
+  prezzoBigl = (costoBigl - scontoOver);
+  console.log(prezzoBigl);
+}else {
+  prezzoBigl = costoBigl;
+  console.log(prezzoBigl);
+}
