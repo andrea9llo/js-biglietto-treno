@@ -1,0 +1,20 @@
+.contenitore{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c41329;
+}
+
+#ticket{
+  font-size: 20px;
+  font-weight: 600;
+  padding: 1%;
+  border: 1px solid black;
+  background-color: #fff;
+  cursor: pointer;
+
+}
+#ticket:hover{
+  text-decoration: underline;
+}

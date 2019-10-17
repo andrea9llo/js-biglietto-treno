@@ -30,14 +30,14 @@ scontoOver = (costoBigl*40) / 100;
 // definirele condizioni per utenti minorenni e untenti over 65
 if (eta < 18) {
   prezzoBigl = (costoBigl - scontoUnder);
-  document.getElementById('ticket').innerHTML = "Il costo del suo biglietto è : " + (costoBigl - scontoUnder) + " €";
+  document.getElementById('ticket').innerHTML = "Prezzo totale del biglietto: " + (costoBigl - scontoUnder) + " € (sconto 20%).";
   // console.log(prezzoBigl);
 }else if (eta > 65) {
   prezzoBigl = (costoBigl - scontoOver);
-  document.getElementById('ticket').innerHTML = "Il costo del suo biglietto è : " + (costoBigl - scontoOver) + " €";
+  document.getElementById('ticket').innerHTML = "Prezzo totale del biglietto: "  + (costoBigl - scontoOver) + " € (sconto 40%).";
   // console.log(prezzoBigl);
 }else {
   prezzoBigl = costoBigl;
-  document.getElementById('ticket').innerHTML = "Il costo del suo biglietto è : " + costoBigl + " €";
+  document.getElementById('ticket').innerHTML = "Prezzo totale del biglietto: " + costoBigl + " €";
   // console.log(prezzoBigl);
 }
